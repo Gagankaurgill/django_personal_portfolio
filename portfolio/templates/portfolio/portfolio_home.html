@@ -1,0 +1,21 @@
+{%  extends 'portfolio/base.html'%}
+
+{% block content %}
+
+{% load static %}
+    <img src="{% static 'portfolio/Square.jpg'  %}" height=250 width=250>
+
+    <h1 style="color:#299617;font-size:60px">
+        <b><u>Gagandeep Gill</u></b>
+    </h1>
+    <h3 style="color:#299617;">
+      <b>Software Developer</b>
+    </h3>
+    <table>
+      <tr>
+        <td><a href="{% static 'portfolio/GagandeepKaurGill.pdf' %}">Resume</a></td>
+      </tr>
+    </table>
+    <br>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<body name= "title" style="background-color:black;" >
+
+<center><h1 style="color:#299617;font-size:40px"><b><u>{{ blog.title }}</u></b></h1></center>
+<p style="color:#299617;">{{ blog.date|date:'M d Y' }}</p>
+<h3 style="color:#299617;">{{ blog.description|safe}}</h3>
+<h5><p style="color:#299617;">{{ blog.blogtext|safe}}</p></h5>
+  

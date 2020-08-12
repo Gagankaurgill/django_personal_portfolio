@@ -1,0 +1,27 @@
+{%  extends 'portfolio/base.html'%}
+
+{% block content %}
+<body name= "title" style="background-color:black;">
+
+<br>
+  <h1 style="color:#299617;font-size:60px">
+      <b><u>Gill's Blog</u></b>
+  </h1></center>
+  <table style="color:#299617;">
+    <br>
+      {% for blog in blogs %}
+        <tr style="color:#299617;">
+          <table style="color:#299617;">
+            <a href="{% url 'blog:detail' blog.id %}" style="color:#E77200;"><b><h3><u>{{ blog.title }}</u></h3></b></a>
+            <tr><td style="color:#F8D568;font-size:11px">{{ blog.category }}</td></tr>
+            <tr><td style="color:#FFAE42;">{{ blog.description }}</td></tr>
+            <tr><td style="color:#FFAE42;"><p>{{ blog.blogtext|striptags|truncatechars:100 }}</p></td></tr>
+            <tr><td style="color:#F8D568;font-size:11px"> {{ blog.date|date:'M d Y' }}</td></tr>
+          </table>
+        </tr>
+        <br>
+      {% endfor %}
+  </table>
+</body>
+
+{% endblock %}
